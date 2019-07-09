@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th = "www.thymeleaf.org">
+<body>
+
+	
+		<table>
+		 <p>Arsti</p></br>
+		 
+		<tr th:each="d:${doctor}">
+			<td th:text="${d.getId()} ">
+			<td th:text="${d.getName()} ">
+			<td th:text=" ${d.getSurname()} ">
+			<td th:text="${d.getOfficeNum()} ">
+			</tr>
+			</table>
+			
+			
+		<table>
+		<p>Pacenti</p></br>		
+		<tr th:each="p:${patient}">
+			<td th:text="${p.getId()} ">
+			<td th:text="${p.getName()} ">
+			<td th:text=" ${p.getSurname()} ">
+			<td th:text=" ${p.isIsHospitalised()} ">
+			</tr>
+			</table>
+	
+	<form action="#" th:action="@{/insertNewAppointment}"   method="post">
+	 <input type = "date"   th:object="*{date}" placeholder = "date"  /> <br>  
+	<input type = "text"  th:object="${desciption}" placeholder = "description"  /> <br>
+	 <input type = "text"   th:object="${doctorId}" placeholder = "doctor id"  /> <br>  
+	  <input type = "text"   th:object="${patientId}" placeholder = "patient id"  /> <br>  
+
+	<input type = "submit" value = "Add Appointment" />
+	</form>
+	
+	
+</body>
+</html>
