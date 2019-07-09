@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th = "www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" href="start.css">
+      </head>
+<body>
+    
+
+
+    <div class = "head"><h1>GAMES</h1></div>
+
+    <div class = "games">
+    <a href="/thousandGame">   <img alt="Thousand" src="giphy.gif" width="100" height="100" ></a>
+    <p>Thousand</p>
+    <a href="/guessPairsGame"><img  alt="Guess Pairs" src="giphy1.gif" width="100" height="100" ></a> 
+    <p>Guess Pairs</p>
+     <a href="/lingo"><img  alt="lingo" src="giphy2.gif" width="100" height="100" ></a> 
+    <p>Lingo</p>
+    
+   </div>
+
+   <div class = "Lingoplay">
+  	<div class = "endL">
+	  <table class = "EndInfo">
+		<tr th:each="l:${l}">	
+		<p> Your Total Points: </p> 
+		<td th:text="${l.getPoints()} "></tr>
+		 </table>
+		 <table class = "EndInfo">
+		<tr>
+		<p> Times Guessed: </p>
+		<td th:text="${gc} ">
+		</tr>
+		</table>
+		<table class = "EndInfo">
+		<tr>
+		<p> Words Guessed: </p>
+		<td th:text="${wc} ">
+		</tr>
+		</table>
+	 	
+	 	<button id="myButton" class="playagain" >Play again</button>
+	 	<button id="myButton1" class="playagain" >Exit</button>
+	   </div>
+   </div>
+   
+  <script   type="text/javascript">
+  document.getElementById("myButton").onclick = function () {
+      location.href = "LingoGame";
+  };
+  document.getElementById("myButton1").onclick = function () {
+      location.href = "/showGames";
+  };
+  </script>
+</body>
+</html>
