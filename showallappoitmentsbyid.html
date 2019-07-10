@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+	<table>
+		<tr th:each="p:${app}">
+			<td th:text="${p.getAppID()} ">
+			<td th:text="${p.getDate()} ">
+			<td th:text=" ${p.getDescription()} ">
+			<td th:text="${p.getDoctor()} ">
+			</tr>
+			</table>
+</body>
+</html>

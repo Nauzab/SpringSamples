@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th = "www.thymeleaf.org">
+<body>
+
+	<form action="#" th:action="@{/authorise}" th:object="${user}" method="post">
+	<input type = "text" th:field="*{username}" placeholder = "username"  /> <br>
+	<input type = "password" th:field="*{password}" placeholder = "password"  /> <br>
+
+
+	<input type = "submit" value = "Authorise" />
+	</form>
+	
+	
+</body>
+</html>

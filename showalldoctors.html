@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+	<table>
+		<tr th:each="d:${doctor}">
+			<td th:text="${d.getDoctorID()} ">
+			<td th:text="${d.getName()} ">
+			<td th:text=" ${d.getSurname()} ">
+			<td th:text="${d.getOfficeNum()} ">
+			</tr>
+			</table>
+</body>
+</html>

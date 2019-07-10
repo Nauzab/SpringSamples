@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th = "www.thymeleaf.org">
+<body>
+
+	<form action="#" th:action="@{/insertNewPatient}" th:object="${patient}" method="post">
+	<input type = "text" th:field="*{name}" placeholder = "name"  /> <br>
+	<input type = "text" th:field="*{surname}" placeholder = "surname"  /> <br>
+	<input type = "text" th:field="*{username}" placeholder = "username"  /> <br>
+	<input type = "password" th:field="*{password}" placeholder = "password"  /> <br>
+	
+
+	<input type = "submit" value = "Add patient" />
+	</form>
+	
+	
+</body>
+</html>
