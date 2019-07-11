@@ -1,0 +1,37 @@
+import java.sql.Time;
+import java.util.Random;
+
+
+public class resultGeneration {
+
+	
+	public static void main(String args[]) 
+    { 
+  
+        // time generator for 42 km 
+		final Random random = new Random();
+		final int millisInDay = 24*60*60*100;
+		Time time = new Time((long)random.nextInt(millisInDay));
+        
+        System.out.println("For 42 km = "+time);
+        
+        
+        //time generator for 21km
+        final int millisInDay1 = 24+60*60*100;
+        int m = random.nextInt(10) + 6;
+		Time time1 = new Time((long)random.nextInt(millisInDay1) -m*60*60*100) ;
+		System.out.println("For 21 km = "+ time1);
+		
+		//time generator for 10km
+		final int millisInDay2 = 24+60*60*100;
+        int m1 = random.nextInt(8) + 16;
+		Time time2 = new Time((long)random.nextInt(millisInDay2) -m1*60*60*100) ;
+		System.out.println("For 10 km = "+ time2);
+		
+		
+		//time generator for 5km
+		final int millisInDay3 = 24+60*60*100;
+        int m2 = random.nextInt(7) + 20;
+		Time time3 = new Time((long)random.nextInt(millisInDay3) -m2*60*60*100) ;
+		System.out.println("For 10 km = "+ time3);
+    } 
